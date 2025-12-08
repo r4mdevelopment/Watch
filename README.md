@@ -81,7 +81,6 @@ http://localhost:8089
 | Переменная | Значение |
 |-----------|----------|
 | `SECRET_KEY` | Ключ для подписи JWT (**HS256**) |
-| `PASSWORD_SALT` | Уникальная соль для хэширования (дополнительно к per-user salt Passlib) |
 | `DATABASE_URL` | URL подключения PostgreSQL |
 | `TMDB_API_KEY` | Ключ TMDB |
 | `USE_TMDB_CACHE` | `true/false` — включить режим тестирования |
@@ -90,7 +89,6 @@ http://localhost:8089
 
 ```
 SECRET_KEY=supersecretjwt
-PASSWORD_SALT=x92jf02jf02jf0j2f
 DATABASE_URL=postgresql://postgres:admin@db:5432/watch
 TMDB_API_KEY=YOUR_KEY
 USE_TMDB_CACHE=false
