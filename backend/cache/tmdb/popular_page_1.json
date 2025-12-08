@@ -1,0 +1,55 @@
+{
+  "page": 1,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/2KGxQSPzZX8KwSPEf0SVZ4Hahb5.jpg",
+      "genre_ids": [28, 12, 878],
+      "id": 76600,
+      "original_language": "en",
+      "original_title": "Avatar: The Way of Water",
+      "overview": "Джейк Салли живёт с новой семьей...",
+      "popularity": 5478.2,
+      "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "release_date": "2022-12-14",
+      "title": "Аватар: Путь воды",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 8974
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg",
+      "genre_ids": [28, 12, 878],
+      "id": 19995,
+      "original_language": "en",
+      "original_title": "Avatar",
+      "overview": "Будущее. Человек получает шанс...",
+      "popularity": 4039.1,
+      "poster_path": "/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+      "release_date": "2009-12-15",
+      "title": "Аватар",
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 29000
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2Eewgp7o5AU1xCataDmiIL2nYxd.jpg",
+      "genre_ids": [28, 14, 12],
+      "id": 572802,
+      "original_language": "en",
+      "original_title": "Aquaman and the Lost Kingdom",
+      "overview": "Артур Карри должен спасти подводное царство...",
+      "popularity": 2321.8,
+      "poster_path": "/kAQRboQIXl3He5o6yqE4srhqO8J.jpg",
+      "release_date": "2023-12-20",
+      "title": "Аквамен и потерянное царство",
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 2100
+    }
+  ],
+  "total_pages": 500,
+  "total_results": 10000
+}
