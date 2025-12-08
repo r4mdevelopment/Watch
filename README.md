@@ -124,14 +124,37 @@ backend/
     models.py
     database.py
     tmdb_cache.py
+    init_db.py
+    test_auth_and_profile.py
+    test_config_errors.py
+    test_database_get_db.py
+    test_favorites_and_history.py
+    test_get_db.py
+    test_reviews_and_movies.py
+    test_user_register_validation.py
     cache/
+    tests/
 frontend/
     index.html
+    login.html
+    movie-detail.html
+    movies.html
+    privacy.html
+    profile.html
+    register.html
+    terms.html
+    package.json
     js/
-    css/
+    styles/
+    assets/
 locust/
+    load_test.py
 docker-compose.yml
+.env
+pytest.ini
+requirements.txt
 run.py
+test_watch.db
 ```
 
 ---
