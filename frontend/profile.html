@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - Watch</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Watch</a>
+                
+                <nav class="nav">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Поиск фильмов...">
+                    </div>
+                    
+                    <!-- Categories -->
+                    <a href="movies.html" class="nav-btn">Все фильмы</a>
+                    
+                    <!-- Profile -->
+                    <a href="profile.html" class="nav-btn icon-btn active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    
+                    <!-- About Us -->
+                    <a href="index.html#about" class="nav-btn">О нас</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Page Content -->
+    <main class="profile-page">
+        <div class="container">
+            <!-- Profile loaded dynamically from backend -->
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img id="profileAvatar" src="/placeholder.svg" alt="Avatar" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: none;">
+                    <svg id="defaultAvatar" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="profile-info">
+                    <h2 id="profileName" class="profile-name">Загрузка...</h2>
+                    <p id="profileEmail" class="profile-email"></p>
+                    <button class="edit-profile-btn" onclick="editProfile()">Редактировать профиль</button>
+                    <button class="logout-btn" onclick="logout()">Выйти</button>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="profile-section">
+                    <h3 class="section-title">Избранное</h3>
+                    <div id="favoritesList" class="movies-grid">
+                        <p>Загрузка...</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3 class="section-title">История посещений</h3>
+                    <div id="historyList" class="history-list">
+                        <p>Загрузка...</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3 class="section-title">Мои отзывы</h3>
+                    <div id="userReviews" class="reviews-list">
+                        <p>Загрузка...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-copyright">© 2025 Watch. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/profile.js"></script>
+</body>
+</html>

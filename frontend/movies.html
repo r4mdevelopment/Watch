@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы - Watch</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Watch</a>
+                
+                <nav class="nav">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Поиск фильмов..." id="movieSearch">
+                    </div>
+                    
+                    <!-- Changed "Категории" button to "Все фильмы" link -->
+                    <a href="movies.html" class="nav-btn">Все фильмы</a>
+                    
+                    <!-- Profile -->
+                    <a href="profile.html" class="nav-btn icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    
+                    <!-- About Us -->
+                    <a href="index.html#about" class="nav-btn">О нас</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Movies Page Content -->
+    <main class="movies-page">
+        <div class="container">
+            <h2 class="page-title">Все фильмы</h2>
+            
+            <!-- Expanded categories dropdown with more genre options -->
+            <div class="filter-bar">
+                <select class="category-select" id="categorySelect">
+                    <option value="all">Все категории</option>
+                    <option value="action">Боевики</option>
+                    <option value="adventure">Приключения</option>
+                    <option value="animation">Мультфильмы</option>
+                    <option value="comedy">Комедии</option>
+                    <option value="crime">Криминал</option>
+                    <option value="documentary">Документальные</option>
+                    <option value="drama">Драмы</option>
+                    <option value="family">Семейные</option>
+                    <option value="fantasy">Фэнтези</option>
+                    <option value="history">Исторические</option>
+                    <option value="horror">Ужасы</option>
+                    <option value="music">Музыкальные</option>
+                    <option value="mystery">Детективы</option>
+                    <option value="romance">Мелодрамы</option>
+                    <option value="scifi">Фантастика</option>
+                    <option value="thriller">Триллеры</option>
+                    <option value="war">Военные</option>
+                    <option value="western">Вестерны</option>
+                </select>
+            </div>
+
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Movies will be dynamically loaded here -->
+            </div>
+
+            <!-- Added pagination controls -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination buttons will be dynamically generated -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-copyright">© 2025 Watch. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/movies.js"></script>
+</body>
+</html>

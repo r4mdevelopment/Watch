@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Watch</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Watch</a>
+                
+                <nav class="nav">
+                    <a href="movies.html" class="nav-btn">Все фильмы</a>
+                    <a href="register.html" class="nav-btn">Регистрация</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <h2 class="auth-title">Вход в аккаунт</h2>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="username">Имя пользователя</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <!-- Hide error message by default with inline style -->
+                    <div id="errorMessage" class="error-message" style="display: none;"></div>
+                    <button type="submit" class="auth-btn">Войти</button>
+                </form>
+                <p class="auth-link">Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/auth.js"></script>
+</body>
+</html>

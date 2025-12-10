@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм - Watch</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Watch</a>
+
+                <nav class="nav">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Поиск фильмов...">
+                    </div>
+
+                    <!-- Categories -->
+                    <a href="movies.html" class="nav-btn">Все фильмы</a>
+
+                    <!-- Profile -->
+                    <a href="profile.html" class="nav-btn icon-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+
+                    <!-- About Us -->
+                    <a href="index.html#about" class="nav-btn">О нас</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Movie Detail Content -->
+    <main class="movie-detail-page">
+        <div class="container">
+            <a href="movies.html" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Назад к фильмам
+            </a>
+
+            <div class="movie-detail-content">
+                <div class="movie-poster-section">
+                    <img id="moviePoster" src="/placeholder.svg" alt="Movie Poster" class="movie-detail-poster">
+                    <button class="favorite-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        Добавить в избранное
+                    </button>
+                </div>
+
+                <div class="movie-info-section">
+                    <h1 id="movieTitle" class="movie-detail-title"></h1>
+                    <div class="movie-meta">
+                        <span id="movieGenre" class="movie-genre-badge"></span>
+                        <span id="movieRating" class="movie-rating-badge"></span>
+                        <span class="movie-year">2024</span>
+                        <span class="movie-duration">2ч 15мин</span>
+                    </div>
+                    <p id="movieDescription" class="movie-description"></p>
+
+                    <!-- Video Player -->
+                    <div class="video-player-container">
+                        <div class="player-selector">
+                            <label for="playerSelect">Выберите плеер:</label>
+                            <select id="playerSelect" class="player-select">
+                                <option value="vidplus" selected>VidPlus</option>
+                                <option value="bard">Bard</option>
+                                <option value="xayah">Xayah</option>
+                                <option value="ekko">Ekko</option>
+                            </select>
+                        </div>
+                        <div class="iframe-wrapper">
+                            <iframe
+                                id="moviePlayer"
+                                class="video-player-iframe"
+                                frameborder="0"
+                                allowfullscreen
+                                allow="autoplay; fullscreen; picture-in-picture"
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="reviews-section">
+                        <h2 class="reviews-title">Отзывы</h2>
+
+                        <!-- Review form with 10 stars and auth check -->
+                        <div class="add-review" id="reviewForm">
+                            <textarea id="reviewText" class="review-textarea" placeholder="Напишите ваш отзыв..."></textarea>
+                            <div class="review-actions">
+                                <div class="rating-input">
+                                    <span>Ваша оценка:</span>
+                                    <div class="stars-input">
+                                        <button class="star-btn" data-rating="1">★</button>
+                                        <button class="star-btn" data-rating="2">★</button>
+                                        <button class="star-btn" data-rating="3">★</button>
+                                        <button class="star-btn" data-rating="4">★</button>
+                                        <button class="star-btn" data-rating="5">★</button>
+                                        <button class="star-btn" data-rating="6">★</button>
+                                        <button class="star-btn" data-rating="7">★</button>
+                                        <button class="star-btn" data-rating="8">★</button>
+                                        <button class="star-btn" data-rating="9">★</button>
+                                        <button class="star-btn" data-rating="10">★</button>
+                                    </div>
+                                </div>
+                                <button class="submit-review-btn">Отправить отзыв</button>
+                            </div>
+                        </div>
+
+                        <div id="reviewsList" class="reviews-list">
+                            <!-- Reviews will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-copyright">© 2025 Watch. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Для работы требуется API ключ от TMDB (https://www.themoviedb.org/settings/api) -->
+    <script src="./js/movie-detail.js"></script>
+</body>
+</html>
